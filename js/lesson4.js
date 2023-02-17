@@ -32,7 +32,7 @@ getFullPrice()
 // задание 3
 
 let titleText = 'MuThErFucKeR'
-function getTitle(obj) {
+function getTitle() {
     return titleText[0].toUpperCase() + titleText.slice(1 , 12).toLocaleLowerCase()
 }
 
@@ -49,6 +49,11 @@ function getServicePercentPrices () {
 }
 
 getServicePercentPrices()
+
+
+// задание 5
+console.log(screens.split(' '));
+
 
 
 
