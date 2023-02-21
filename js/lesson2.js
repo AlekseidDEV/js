@@ -1,9 +1,11 @@
 let title = prompt ('как называется твой проект ?');
+console.log(title);
 let screens = prompt ('какие типы экранов нужно разработать?');
+console.log(screens);
 let rollback = 2900;
 let fullPrice = 120000;
 let adaptive = confirm('адаптив нужен?');
-
+console.log(adaptive);
 
 let screenPrice = +prompt("сколько будет стоить данная работа?")
 console.log(screenPrice);
@@ -42,6 +44,8 @@ let saleFull = +prompt('введите итоговую стоимость, дл
             console.log("скидка 10%");
             break
     }
+
+
 
 
 
