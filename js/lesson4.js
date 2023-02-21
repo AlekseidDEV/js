@@ -51,26 +51,6 @@ const examination = function (promVop) {
 console.log(examination(promVop));
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // задание 4
 
 function getServicePercentPrices () {
@@ -86,22 +66,3 @@ getServicePercentPrices()
 
 // задание 5
 console.log(screens.split(' '));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
