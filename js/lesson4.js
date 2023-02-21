@@ -21,7 +21,7 @@ console.log(getAllServicePrices);
 
 function getFullPrice () {
     function step(str) {
-        console.log(str);
+        return str
     }
 
     step(getAllServicePrices + screenPrive)
@@ -29,14 +29,47 @@ function getFullPrice () {
 
 getFullPrice()
 
+
+
 // задание 3
 
-let titleText = 'MuThErFucKeR'
-function getTitle() {
-    return titleText[0].toUpperCase() + titleText.slice(1 , 12).toLocaleLowerCase()
+// let titleText = prompt()
+// function getTitle() {
+//     return titleText[0].toUpperCase() + titleText.slice(1 , 12).toLocaleLowerCase()
+// }
+
+const promVop = prompt('')
+
+
+const examination = function (promVop) {
+     if (promVop == []) {
+        return 'ты чо лох ? '
+     }  
+        return promVop[0].toUpperCase() + promVop.slice(1 , 12).toLocaleLowerCase()
 }
 
-console.log(getTitle());
+console.log(examination(promVop));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // задание 4
 
