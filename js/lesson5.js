@@ -54,7 +54,7 @@ function getServicePercentPrices() {
 }
 
 const getTitle = function() {
-    return title[0].toUpperCase() + title.substring(" ").toLocaleLowerCase()
+    return title[0].toUpperCase() + title.substring(1).toLocaleLowerCase()
 }
 
 function getRollMessege() {
