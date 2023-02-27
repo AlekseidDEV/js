@@ -1,4 +1,5 @@
 'use strict'
+
 let title 
 let screens 
 let adaptive 
@@ -57,32 +58,24 @@ const getTitle = function() {
 }
 
 function getRollMessege() {
-        // if (servicePercentPrices < 0) {
-        //     return 'итоговая сумма, с учетом вычета суммы посреднику, суммы дополнительных услуг : ' + servicePercentPrices + ' , за такие деньги не работаем';
-        // } 
+        
+switch (true) {
+    case servicePercentPrices < 0:
+         return 'итоговая сумма, с учетом вычета суммы посреднику, суммы дополнительных услуг : ' + servicePercentPrices + ' , за такие деньги не работаем';
 
-        switch (true) {
-            case servicePercentPrices < 0:
-                 return 'итоговая сумма, с учетом вычета суммы посреднику, суммы дополнительных услуг : ' + servicePercentPrices + ' , за такие деньги не работаем';
+    case servicePercentPrices > 0 && servicePercentPrices < 10000:
+        return 'итоговая сумма, с учетом вычета суммы посреднику, суммы дополнительных услуг : ' + servicePercentPrices + ' , скидка не предусмотрена';
+            
+    case servicePercentPrices > 10000 && servicePercentPrices < 15000:
+        return 'итоговая сумма, с учетом вычета суммы посреднику, суммы дополнительных услуг : ' + servicePercentPrices + ' , скидка 5%';
+            
+    case servicePercentPrices > 15000 && servicePercentPrices < 30000:
+        return 'итоговая сумма, с учетом вычета суммы посреднику, суммы дополнительных услуг : ' + servicePercentPrices + ' , скидка 10%';
+            
+    case servicePercentPrices > 30000:
+        return 'итоговая сумма, с учетом вычета суммы посреднику, суммы дополнительных услуг : ' + servicePercentPrices + ' , скидка 15%';
 
-            // case servicePercentPrices < 0:
-            //     return 'итоговая сумма, с учетом вычета суммы посреднику, суммы дополнительных услуг : ' + servicePercentPrices + ' , за такие деньги не работаем';
         }
-
-       
-//    return function(total){
-//     if(total < a) {
-//         return 'итоговая сумма, с учетом вычета суммы посреднику, суммы дополнительных услуг : ' + servicePercentPrices + ' , за такие деньги не работаем';
-//     } else if (total > a && total < b) {
-//         return 'итоговая сумма, с учетом вычета суммы посреднику, суммы дополнительных услуг : ' + servicePercentPrices + ' , скидка не предусмотрена';
-//     } else if(total > c && total < d){
-//         return 'итоговая сумма, с учетом вычета суммы посреднику, суммы дополнительных услуг : ' + servicePercentPrices + ' , вам доступен купон на скидку 5%';
-//     } else if (total > b && total < c) {
-//         return 'итоговая сумма, с учетом вычета суммы посреднику, суммы дополнительных услуг : ' + servicePercentPrices + ' , вам доступен купон на скидку 10%';
-//     } else if (total > c){
-//         return 'итоговая сумма, с учетом вычета суммы посреднику, суммы дополнительных услуг : ' + servicePercentPrices + ' , вам доступен купон на скидку 15%';
-//     }
-//    }
 }
 
 function infoScrenn () {
@@ -90,11 +83,8 @@ function infoScrenn () {
 }
 
 
-
 infoScrenn()
 asking()
-
-
 
 
 title = getTitle()
@@ -107,40 +97,3 @@ SumOff = getRollMessege()
 console.log(title);
 console.log(infoScrenn());
 console.log(SumOff);
-
-
-
-
-
-
-
-
-
-
-
-// function getRollMessege(a = 0, b = 10000, c = 15000, d = 30000) {
-//    return function(total){
-//     if(total < a) {
-//         return 'итоговая сумма, с учетом вычета суммы посреднику, суммы дополнительных услуг : ' + servicePercentPrices + ' , за такие деньги не работаем';
-//     } else if (total > a && total < b) {
-//         return 'итоговая сумма, с учетом вычета суммы посреднику, суммы дополнительных услуг : ' + servicePercentPrices + ' , скидка не предусмотрена';
-//     } else if(total > c && total < d){
-//         return 'итоговая сумма, с учетом вычета суммы посреднику, суммы дополнительных услуг : ' + servicePercentPrices + ' , вам доступен купон на скидку 5%';
-//     } else if (total > b && total < c) {
-//         return 'итоговая сумма, с учетом вычета суммы посреднику, суммы дополнительных услуг : ' + servicePercentPrices + ' , вам доступен купон на скидку 10%';
-//     } else if (total > c){
-//         return 'итоговая сумма, с учетом вычета суммы посреднику, суммы дополнительных услуг : ' + servicePercentPrices + ' , вам доступен купон на скидку 15%';
-//     }
-//    }
-// }
-
-// fullPrice = getFullPrice(servicePrice1, servicePrice2);
-// allServicePrices = getAllServicePrices(servicePrice1, servicePrice2);
-// servicePercentPrices = getServicePercentPrices(screenPrice, servicePrice1, servicePrice2);
-
-// infoScrenn()
-
-// console.log(getTitle());
-// console.log(infoScrenn());
-// console.log(getRollMessege(0)(servicePercentPrices = getServicePercentPrices(screenPrice, servicePrice1, servicePrice2)));
-
